@@ -63,6 +63,8 @@ class MainActivity : AppCompatActivity() {
                 if (photoHeight == null) photoHeight = 0.0
                 if (photoWidth == null) photoWidth = 0.0
 
+                XYFunctions.setCanvasHeight(paintingHeight)
+                XYFunctions.setCanvasWidth(paintingWidth)
 
                 XYFunctions.calculateCoefficientHeight(photoHeight, paintingHeight)
                 XYFunctions.calculateCoefficientWidth(photoWidth, paintingWidth)
@@ -95,6 +97,24 @@ class MainActivity : AppCompatActivity() {
         bttnUpload = findViewById(R.id.buttonUpload)
 
         bttnUpload.setOnClickListener {
+            val paintingHeightText = textPaintingHeight.text.toString()
+            val paintingWidthText = textPaintingWidth.text.toString()
+
+            if (paintingHeightText.isNotEmpty() &&
+                paintingWidthText.isNotEmpty()
+            ) {
+                var paintingHeight = textPaintingHeight.text.toString().toDouble()
+                var paintingWidth = textPaintingWidth.text.toString().toDouble()
+                XYFunctions.setCanvasHeight(paintingHeight)
+                XYFunctions.setCanvasWidth(paintingWidth)
+            }
+            else{
+                XYFunctions.setCanvasHeight(0.0)
+                XYFunctions.setCanvasWidth(0.0)
+            }
+
+                //println("HEIGHT  WIDTH" + XYFunctions.canvasHeight + XYFunctions.canvasWidth)
+
             val intent = Intent(this, UploadActivity::class.java)
             startActivity(intent)
         }

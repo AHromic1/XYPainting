@@ -4,24 +4,95 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#C5D4EB"
     tools:context=".UploadActivity">
 
     <ImageView
         android:id="@+id/painting2"
-        android:layout_width="190dp"
-        android:layout_height="150dp"
-        app:srcCompat="@drawable/mona_lisa"
-        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="600dp"
+        app:srcCompat="@drawable/camera"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/button_first" />
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonPrevious"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nazad"
+        android:textColor="#502380"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button_first"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/textViewHeightResult"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="Visina na platnu"
+        android:textColor="#502380"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewWidthResult"
+        app:layout_constraintEnd_toStartOf="@+id/editTextHeightResult"
+        />
+
+    <TextView
+        android:id="@+id/textViewWidthResult"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="Širina na platnu"
+        android:textColor="#502380"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/painting2"
+        app:layout_constraintEnd_toStartOf="@+id/editTextWidthResult"
+        />
+
+    <TextView
+        android:id="@+id/editTextHeightResult"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:textColor="#502380"
+        app:layout_constraintStart_toEndOf="@+id/textViewHeightResult"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textViewHeightResult"
+        />
+    <TextView
+        android:id="@+id/editTextWidthResult"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:textColor="#502380"
+        app:layout_constraintStart_toEndOf="@+id/textViewWidthResult"
+        app:layout_constraintTop_toTopOf="@+id/textViewWidthResult"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
 
     <Button
         android:id="@+id/button_first"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/next"
+        android:text="Odaberite fotografiju"
+        android:textColor="#502380"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/buttonPrevious"
         />
 </androidx.constraintlayout.widget.ConstraintLayout>
