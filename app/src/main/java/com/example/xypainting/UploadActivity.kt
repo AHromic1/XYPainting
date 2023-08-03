@@ -1,6 +1,8 @@
 package com.example.xypainting
 
 import android.os.Bundle
+import android.view.MotionEvent
+import android.widget.ImageView
 import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
@@ -11,30 +13,38 @@ import com.example.xypainting.databinding.ActivityUploadBinding
 
 class UploadActivity : AppCompatActivity() {
 
-    private lateinit var appBarConfiguration: AppBarConfiguration
-    private lateinit var binding: ActivityUploadBinding
+    private lateinit var imageView: ImageView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_upload)
 
-        binding = ActivityUploadBinding.inflate(layoutInflater)
-        setContentView(binding.root)
 
-        setSupportActionBar(binding.toolbar)
+        imageView = findViewById(R.id.painting2)
 
-        val navController = findNavController(R.id.nav_host_fragment_content_upload)
-        appBarConfiguration = AppBarConfiguration(navController.graph)
-        setupActionBarWithNavController(navController, appBarConfiguration)
+        imageView.setOnTouchListener { view, motionEvent ->
+            if (motionEvent.action == MotionEvent.ACTION_UP) {  //actions are performed when user lifts the finger og the image
+                val imageWidth = imageView.width.toFloat()
+                val imageHeight = imageView.height.toFloat()
+                println("dimensions: $imageWidth $imageHeight")
+                val clickedX = motionEvent.x // Clicked X-coordinate in pixels
+                val clickedY = motionEvent.y // Clicked Y-coordinate in pixels
 
-        binding.fab.setOnClickListener { view ->
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                .setAction("Action", null).show()
+                // Calculate the actual coordinates in centimeters
+                val actualImageWidthInCm = 21 // Replace with actual image width in centimeters
+                val actualImageHeightInCm = 29.7 // Replace with actual image height in centimeters
+
+                val centimetersX = (clickedX / imageWidth) * actualImageWidthInCm
+                val centimetersY = actualImageHeightInCm - (clickedY / imageHeight) * actualImageHeightInCm
+
+                println("Pixels: $clickedX $clickedY")
+                println("Centimeters: $centimetersX $centimetersY")
+            }
+            true // Return 'true' to consume the touch event - no further actions are needed
         }
-    }
 
-    override fun onSupportNavigateUp(): Boolean {
-        val navController = findNavController(R.id.nav_host_fragment_content_upload)
-        return navController.navigateUp(appBarConfiguration)
-                || super.onSupportNavigateUp()
-    }
+
+
+}
+
 }
