@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#B2AC88"
+    tools:context=".MainActivity">
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutFirst"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="0dp"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutPainting"
+        android:layout_width="wrap_content"
+        android:layout_height="350dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+    <TextView
+        android:id="@+id/textViewPainting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Platno"
+        android:layout_marginTop="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/painting"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/painting"
+        android:layout_width="190dp"
+        android:layout_height="150dp"
+        app:srcCompat="@drawable/roses"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewPainting" />
+
+    <EditText
+        android:id="@+id/editTextPaintingWidth"
+        android:layout_width="190dp"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:hint = "Širina"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/painting" />
+
+        <EditText
+            android:id="@+id/editTextPaintingHeight"
+            android:layout_width="190dp"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:hint = "Visina"
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextPaintingWidth" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutPhoto"
+        android:layout_width="190dp"
+        android:layout_height="350dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginRight="20dp"
+        app:layout_constraintStart_toEndOf="@+id/layoutPainting"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <TextView
+            android:id="@+id/textViewPhoto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fotografija"
+            android:layout_marginTop="20dp"
+            app:layout_constraintBottom_toTopOf="@+id/photo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/photo"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:srcCompat="@drawable/roses_real"
+            android:layout_marginTop="35dp"
+            android:layout_marginRight="45dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewPhoto" />
+
+        <EditText
+            android:id="@+id/editTextPhotoWidth"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:hint = "Širina"
+            android:layout_marginTop="44dp"
+            android:layout_marginRight="20dp"
+            app:layout_constraintStart_toStartOf="@+id/photo"
+            app:layout_constraintTop_toBottomOf="@+id/photo" />
+
+        <EditText
+            android:id="@+id/editTextPhotoHeight"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:hint = "Visina"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            app:layout_constraintStart_toStartOf="@+id/photo"
+            app:layout_constraintTop_toBottomOf="@+id/editTextPhotoWidth" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutSecond"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="0dp"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layoutFirst" >
+
+
+    <TextView
+        android:id="@+id/textViewInstructions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Unesite koordinate željene tačke na slici ili izvršite upload slike koju prenosite na platno:"
+        android:layout_marginLeft="5dp"
+        app:layout_constraintBottom_toTopOf="@+id/graph"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/graph"
+            android:layout_width="190dp"
+            android:layout_height="150dp"
+            app:srcCompat="@drawable/cartesian"
+            android:layout_marginTop="35dp"
+            android:layout_marginRight="45dp"
+            android:layout_marginLeft="5dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewInstructions" />
+
+        <TextView
+            android:id="@+id/textViewWidth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Širina"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="10dp"
+            app:layout_constraintStart_toEndOf="@+id/graph"
+            app:layout_constraintTop_toTopOf="@+id/graph" />
+
+        <EditText
+            android:id="@+id/editTextWidth"
+            android:layout_width="190dp"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:hint = "2"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="10dp"
+            app:layout_constraintStart_toEndOf="@+id/graph"
+            app:layout_constraintTop_toBottomOf="@+id/textViewWidth" />
+
+        <TextView
+            android:id="@+id/textViewHeight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Visina"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="10dp"
+            app:layout_constraintStart_toEndOf="@+id/graph"
+            app:layout_constraintTop_toBottomOf="@+id/editTextWidth" />
+
+        <EditText
+            android:id="@+id/editTextHeight"
+            android:layout_width="190dp"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:hint = "5"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="10dp"
+            app:layout_constraintStart_toEndOf="@+id/graph"
+            app:layout_constraintTop_toBottomOf="@+id/textViewHeight" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutThird"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="0dp"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layoutSecond"
+        android:paddingBottom="20dp"
+        >
+
+        <Button
+            android:id="@+id/buttonCalculate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Izračunaj"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/buttonUpload"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="0dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+             />
+        <Button
+            android:id="@+id/buttonUpload"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Upload slike"
+            app:layout_constraintStart_toEndOf="@+id/buttonCalculate"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginLeft="0dp"
+            />
+
+        <TextView
+            android:id="@+id/textViewHeightResult"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Visina na platnu"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewWidthResult"
+            app:layout_constraintEnd_toStartOf="@+id/editTextHeightResult"
+            />
+
+        <TextView
+            android:id="@+id/textViewWidthResult"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Širina na platnu"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/buttonCalculate"
+            app:layout_constraintEnd_toStartOf="@+id/editTextWidthResult"
+            />
+
+        <TextView
+            android:id="@+id/editTextHeightResult"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            app:layout_constraintStart_toEndOf="@+id/textViewHeightResult"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textViewHeightResult"
+             />
+        <TextView
+            android:id="@+id/editTextWidthResult"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            app:layout_constraintStart_toEndOf="@+id/textViewWidthResult"
+            app:layout_constraintTop_toTopOf="@+id/textViewWidthResult"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+</ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
