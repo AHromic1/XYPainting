@@ -55,8 +55,6 @@ class UploadActivity : AppCompatActivity() {
                 val centimetersY = actualImageHeightInCm?.minus((clickedY / imageHeight) * actualImageHeightInCm)
 
                 val decimalFormat = DecimalFormat("#.00")
-
-
                 resultHeight = findViewById(R.id.editTextHeightResult)
                 resultHeight.text = decimalFormat.format(centimetersY)
                 resultWidth = findViewById(R.id.editTextWidthResult)
