@@ -37,12 +37,13 @@ class UploadActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_upload)
 
-        imageView = findViewById(R.id.painting2)
+        imageView = findViewById(R.id.painting3)
 
         imageView.setOnTouchListener { view, motionEvent ->
             if (motionEvent.action == MotionEvent.ACTION_UP) {  //actions are performed when user lifts the finger og the image
                 val imageWidth = imageView.width.toFloat() //this too is in pixels
                 val imageHeight = imageView.height.toFloat()
+
                 //println("dimensions: $imageWidth $imageHeight")
                 val clickedX = motionEvent.x // Clicked X-coordinate in pixels
                 val clickedY = motionEvent.y // Clicked Y-coordinate in pixels

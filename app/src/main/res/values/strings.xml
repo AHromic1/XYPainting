@@ -11,4 +11,7 @@
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+<!-- class used for specific behaviour, like smooth scrolling, zoom in, etc.-->
+    <string name="appbar_scrolling_view_behavior">com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior</string>
+
 </resources>
