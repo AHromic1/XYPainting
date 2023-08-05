@@ -70,7 +70,7 @@ class UploadActivity : AppCompatActivity() {
 
         bttnUpload = findViewById(R.id.button_first)
 
-        // Create the launcher
+        // Creating the launcher
         imagePickLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
             if (result.resultCode == Activity.RESULT_OK && result.data != null) {
                 val selectedImageUri = result.data?.data
