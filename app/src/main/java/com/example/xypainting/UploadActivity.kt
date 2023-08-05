@@ -58,9 +58,9 @@ class UploadActivity : AppCompatActivity() {
 
 
                 resultHeight = findViewById(R.id.editTextHeightResult)
-                resultHeight.text = decimalFormat.format(centimetersY.toString())
+                resultHeight.text = decimalFormat.format(centimetersY)
                 resultWidth = findViewById(R.id.editTextWidthResult)
-                resultWidth.text = decimalFormat.format(centimetersX.toString())
+                resultWidth.text = decimalFormat.format(centimetersX) //it works with toString at the end, but not neccessary, automatic conversion happens due to .text bit
 
                 //println("Pixels: $clickedX $clickedY")
                 //println("Centimeters: $centimetersX $centimetersY")
