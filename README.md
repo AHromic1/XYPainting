@@ -6,18 +6,13 @@
 <br>
 <br>
 
-<img src="https://github.com/AHromic1/XYPainting/assets/115954313/41511c0f-1161-4ba2-b86b-43e32d292c2b" width = "200">
+<img src="https://github.com/AHromic1/XYPainting/assets/115954313/41511c0f-1161-4ba2-b86b-43e32d292c2b" width = "250">
 
-![Screenshot_20230805_205823_XYPainting](https://github.com/AHromic1/XYPainting/assets/115954313/41511c0f-1161-4ba2-b86b-43e32d292c2b)
+<img src="https://github.com/AHromic1/XYPainting/assets/115954313/d4b55bea-63ca-4847-b6ef-8fac2cee12ea" width = "250">
 
-![Screenshot_20230805_205842_XYPainting](https://github.com/AHromic1/XYPainting/assets/115954313/d4b55bea-63ca-4847-b6ef-8fac2cee12ea)
+<img src="https://github.com/AHromic1/XYPainting/assets/115954313/b2c52493-931f-4e1c-a0a5-4df710e3ed98" width = "250">
 
-![Screenshot_20230805_205848_XYPainting](https://github.com/AHromic1/XYPainting/assets/115954313/b2c52493-931f-4e1c-a0a5-4df710e3ed98)
-
-
-![Screenshot_20230805_205907_XYPainting](https://github.com/AHromic1/XYPainting/assets/115954313/3697722e-8aa6-446a-a452-42d6b5228986)
-
-
+<img src="https://github.com/AHromic1/XYPainting/assets/115954313/3697722e-8aa6-446a-a452-42d6b5228986" width = "250">
 
 
 
