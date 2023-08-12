@@ -36,4 +36,5 @@ Image upload interface result
 
  The next step is enabling zoom in and out, applying grid over the image for easier visualisation and creating separate fragments for horizontal and vertical images, in order to improve the performance of the app (also tidying up and updating this Readme (: ).
 
+*All of the icons and images used in building UI were taken from Flaticon. 
 
