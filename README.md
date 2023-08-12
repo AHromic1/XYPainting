@@ -27,7 +27,7 @@ Image upload interface
 <img src="https://github.com/AHromic1/XYPainting/assets/115954313/3697722e-8aa6-446a-a452-42d6b5228986" width = "250" align="center">
 <br>
 <br>
-Image upload result
+Image upload interface result
 <br>
 <br>
 
