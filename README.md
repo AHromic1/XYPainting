@@ -8,9 +8,11 @@
 
 
 
+![Screenshot_20230805_205907_XYPainting](https://github.com/AHromic1/XYPainting/assets/115954313/3697722e-8aa6-446a-a452-42d6b5228986)
 
 
-![Uploading image.png…]()
+![image](https://github.com/AHromic1/XYPainting/assets/115954313/daea163a-ec53-4f75-83b3-393a854ed231)
+
 
 
 
