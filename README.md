@@ -6,19 +6,21 @@
 <br>
 <br>
 
-<img src="https://github.com/AHromic1/XYPainting/assets/115954313/41511c0f-1161-4ba2-b86b-43e32d292c2b" width = "250">
+<img src="https://github.com/AHromic1/XYPainting/assets/115954313/41511c0f-1161-4ba2-b86b-43e32d292c2b" width = "250" align="center">
 
-<img src="https://github.com/AHromic1/XYPainting/assets/115954313/d4b55bea-63ca-4847-b6ef-8fac2cee12ea" width = "250">
+<img src="https://github.com/AHromic1/XYPainting/assets/115954313/d4b55bea-63ca-4847-b6ef-8fac2cee12ea" width = "250" align="center">
 
-<img src="https://github.com/AHromic1/XYPainting/assets/115954313/b2c52493-931f-4e1c-a0a5-4df710e3ed98" width = "250">
+<img src="https://github.com/AHromic1/XYPainting/assets/115954313/b2c52493-931f-4e1c-a0a5-4df710e3ed98" width = "250" align="center">
 
-<img src="https://github.com/AHromic1/XYPainting/assets/115954313/3697722e-8aa6-446a-a452-42d6b5228986" width = "250">
-
-
+<img src="https://github.com/AHromic1/XYPainting/assets/115954313/3697722e-8aa6-446a-a452-42d6b5228986" width = "250" align="center">
 
 
 
 
-* Currently, I am working on enabling zoom in and out, applying grid over the image for easier visualisation and creating separate fragments for horizontal and vertical images, in order to improve the performance of the app.
+<br>
+<br>
+
+
+ The next step is enabling zoom in and out, applying grid over the image for easier visualisation and creating separate fragments for horizontal and vertical images, in order to improve the performance of the app (also tidying up and updating this Readme (: ).
 
 
