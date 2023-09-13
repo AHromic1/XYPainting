@@ -5,39 +5,39 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#C5D4EB"
-    tools:context=".UploadActivity">
+    tools:context=".UploadActivityHorizontal">
 
     <ImageView
         android:id="@+id/painting2"
         android:layout_width="400dp"
-        android:layout_height="400dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/grid" />
-    <ImageView
-        android:id="@+id/painting3"
-        android:layout_width="400dp"
-        android:layout_height="400dp"
-        android:layout_marginTop="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/grid"
+        app:srcCompat="@drawable/horizontal"
         />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="400dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/painting2"/>
 
     <Button
         android:id="@+id/buttonPrevious"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Nazad"
+        android:text="Početna"
         android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewHeightResult"
-        app:layout_constraintEnd_toStartOf="@+id/button_first"
+        app:layout_constraintEnd_toStartOf="@+id/button_vertical"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="55dp"
         />
 
     <TextView
@@ -62,11 +62,11 @@
         android:text="Širina na platnu (cm)"
         android:textSize="16sp"
         android:textColor="#502380"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="30dp"
         android:layout_marginLeft="0dp"
         android:layout_marginRight="0dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/painting2"
+        app:layout_constraintTop_toBottomOf="@+id/button_first"
         app:layout_constraintEnd_toStartOf="@+id/editTextWidthResult"
         />
 
@@ -76,6 +76,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="0dp"
         android:layout_marginRight="0dp"
+        android:layout_marginTop="5dp"
         android:textSize="16sp"
         android:textColor="#502380"
         app:layout_constraintStart_toEndOf="@+id/textViewHeightResult"
@@ -88,6 +89,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="0dp"
         android:layout_marginRight="0dp"
+        android:layout_marginTop="5dp"
         android:textSize="16sp"
         android:textColor="#502380"
         app:layout_constraintStart_toEndOf="@+id/textViewWidthResult"
@@ -99,15 +101,22 @@
         android:id="@+id/button_first"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
         android:text="Odaberite fotografiju"
         android:textSize="16sp"
-        android:layout_marginBottom="0dp"
-        android:layout_marginLeft="0dp"
-        android:layout_marginRight="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/guideline"
+         />
+
+    <Button
+        android:id="@+id/button_vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Vertikalno"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/buttonPrevious"
         app:layout_constraintStart_toEndOf="@+id/buttonPrevious"
-        app:layout_constraintTop_toBottomOf="@+id/textViewHeightResult"
-        android:layout_marginTop="40dp"
-        />
+        app:layout_constraintTop_toTopOf="@+id/buttonPrevious" />
 </androidx.constraintlayout.widget.ConstraintLayout>

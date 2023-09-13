@@ -115,7 +115,7 @@ class MainActivity : AppCompatActivity() {
 
                 //println("HEIGHT  WIDTH" + XYFunctions.canvasHeight + XYFunctions.canvasWidth)
 
-            val intent = Intent(this, UploadActivity::class.java)
+            val intent = Intent(this, UploadActivityHorizontal::class.java)
             startActivity(intent)
         }
 

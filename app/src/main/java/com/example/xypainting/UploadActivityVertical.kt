@@ -1,5 +1,6 @@
 package com.example.xypainting
 
+import android.annotation.SuppressLint
 import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
@@ -10,18 +11,11 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
-import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
-import androidx.navigation.findNavController
-import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.navigateUp
-import androidx.navigation.ui.setupActionBarWithNavController
-import com.example.xypainting.databinding.ActivityUploadBinding
 import com.bumptech.glide.Glide
 import java.text.DecimalFormat
 
-
-class UploadActivity : AppCompatActivity() {
+class UploadActivityVertical : AppCompatActivity() {
 
     companion object {
         private const val REQUEST_IMAGE_PICK = 100
@@ -33,11 +27,13 @@ class UploadActivity : AppCompatActivity() {
     private lateinit var resultHeight: TextView
     private lateinit var resultWidth: TextView
     private lateinit var bttnBack: Button
+    private lateinit var bttnVertical: Button
+    @SuppressLint("MissingInflatedId")  //sometimes it doesn't recognize id which exists
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_upload)
+        setContentView(R.layout.activity_upload_vertical)
 
-        imageView = findViewById(R.id.painting3)
+        imageView = findViewById(R.id.painting2V)
 
         imageView.setOnTouchListener { view, motionEvent ->
             if (motionEvent.action == MotionEvent.ACTION_UP) {  //actions are performed when user lifts the finger og the image
@@ -67,7 +63,7 @@ class UploadActivity : AppCompatActivity() {
             true // Return 'true' to consume the touch event - no further actions are needed
         }
 
-        bttnUpload = findViewById(R.id.button_first)
+        bttnUpload = findViewById(R.id.button_first2)
 
         // Creating the launcher
         imagePickLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
@@ -86,13 +82,17 @@ class UploadActivity : AppCompatActivity() {
             imagePickLauncher.launch(intent)
         }
 
-        bttnBack = findViewById(R.id.buttonPrevious)
+        bttnBack = findViewById(R.id.buttonPrevious2)
         bttnBack.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
 
+        bttnVertical = findViewById(R.id.button_horizontal)
 
-}
-
+        bttnVertical.setOnClickListener {
+            val intent = Intent(this, UploadActivityHorizontal::class.java)
+            startActivity(intent)
+        }
+    }
 }
